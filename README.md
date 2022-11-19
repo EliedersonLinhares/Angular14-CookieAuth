@@ -1,27 +1,38 @@
-# Angular14CookieAuth
+# Angular14 - Cookie Auth
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.7.
+This project was intended to devlop on system with security system
+where JWT token is put on cookies for security purposes.
 
-## Development server
+## Backend server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Backend system was developed on Java(Spring boot) with spring security
 
-## Code scaffolding
+SpringBoot-CookieAuth - (https://github.com/EliedersonLinhares/SpringBoot-CookieAuth)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
 
-## Build
+`Use cookies to store JWT token` -> Http-only Cookies are used to avoid putting tokens on localstorage.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+`Rememnber-me simple system` -> Using the refresh token endpoints of backend we can put one check box on login page, if marked he is put a true flag on session-storage, and if is true call the backend endpoint with HttpInterceptor on angular.
 
-## Running unit tests
+`Authenticate system` -> For logged-in only user access the system pages .
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Running the application
 
-## Running end-to-end tests
+Run `npm install` to instal node-modules.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Run `ng serve` to run application.
 
-## Further help
+Note: need backend and database already running
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## What can implemented in future versions
+
+-Use the role system in frontend
+
+-Make page with data of user profile
+
+-Use form restrictions on login page
+
+## Reference
+
+Tech Seeker - (https://www.learmoreseekmore.com/2022/01/part1-angular-jwt-authentication-using-http-only-cookie.html)

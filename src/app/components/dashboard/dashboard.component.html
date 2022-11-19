@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="row">
+		<div class="col col-md4 offset-md-4">
+			<legend>Registred Users</legend>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-md-3 m2" *ngFor="let key of registredUsers">
+			<div class="card">
+				<img
+					src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+					class="card-img-top"
+					alt="..."
+				/>
+				<div class="card-body">
+					<h5 class="card-title">{{ key.username }}</h5>
+					<p class="card-text">{{ key.email }}</p>
+					<p class="card-text">
+						<span class="badge bg-primary">
+							{{ key.roles }}
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

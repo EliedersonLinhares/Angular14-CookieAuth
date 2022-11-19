@@ -1,0 +1,52 @@
+<div class="container mt-5">
+	<div class="row">
+		<div class="col md-6 offset-md-3">
+			<div class="card">
+				<div class="card-body">
+					<form method="post">
+						<legend class="card-title d-flex justify-content-center">
+							Login
+						</legend>
+						<div class="mb-3">
+							<label for="txtEmail" class="form-label">Email</label>
+							<input
+								type="text"
+								[(ngModel)]="loginUser.email"
+								name="email"
+								class="form-control"
+								id="txtEmail"
+							/>
+						</div>
+						<div class="mb-3">
+							<label for="txtPassword" class="form-label">Password</label>
+							<input
+								type="password"
+								[(ngModel)]="loginUser.password"
+								name="password"
+								class="form-control"
+								id="txtPassword"
+							/>
+							<br />
+							<div class="form-check form-switch">
+								<input
+									class="form-check-input"
+									type="checkbox"
+									value=""
+									id="flexCheckDefault"
+									[checked]="isActive"
+									(click)="changeActive()"
+								/>
+								<label class="form-check-label" for="flexCheckDefault">
+									Remenber-me
+								</label>
+							</div>
+						</div>
+						<button type="button" class="btn btn-danger" (click)="login()">
+							Login
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
